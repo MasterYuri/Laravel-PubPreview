@@ -2,21 +2,23 @@
 
 return [
 
+    // For 'Route::group()' call to declare controller action.
     'route' => 
     [
         'middleware' => ['web'],
     ],
     
-    // Directories to check files.
+    // Directories to search requesting files.
     'directories' => 
     [
         public_path(),
         public_path() . "/uploads/",
     ],
 
-    // Directory to store generated preview.
+    // Directory (temporary) to store generated preview.
     'store' => public_path() . "/previews/",
-
+    
+    // Allowed resolutions and modes (to avoid maleficent requests)
     'allowed' =>
     [
         // If empty - all allowed
@@ -36,9 +38,9 @@ return [
     // Background RGB color in fitin/fitout modes.
     'fill_color' => "ffffff",
     
-    // Return image if can't get it.
+    // Image to return if can't find requesting one.
     'no_image_path' => public_path() . '/img/get_img_fail.png',
-
+    
     'watermark' => 
     [
         //@todo

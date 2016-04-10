@@ -16,7 +16,7 @@ But usually image is too big so you have to generate smaller files:
 <img src="{{ asset($article->preview_100x100) }}" alt="Preview">
 ```
 
-This library lets you do simplify it. You have function that makes it on fly:
+This library lets you to simplify it and make it on fly:
 
 ``` html
 <img src="{{ pub_review('img/photo1.jpg',  100, 100, "scale") }}" alt="Preview">
